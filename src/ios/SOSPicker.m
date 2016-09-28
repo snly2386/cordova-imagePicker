@@ -60,7 +60,7 @@
     NSString* filePath;
     ALAsset* asset = nil;
     UIImageOrientation orientation = UIImageOrientationUp;;
-    CGSize targetSize = CGSizeMake(self.width, self.height);
+    CGSize targetSize = CGSizeMake(500, 500);
 	for (NSDictionary *dict in info) {
         asset = [dict objectForKey:@"ALAsset"];
         // From ELCImagePickerController.m
@@ -122,8 +122,8 @@
     UIImage* sourceImage = anImage;
     UIImage* newImage = nil;
     CGSize imageSize = sourceImage.size;
-    CGFloat width = 500;
-    CGFloat height = 500;
+    CGFloat width = imageSize.width;
+    CGFloat height = imageSize.height;
     CGFloat targetWidth = frameSize.width;
     CGFloat targetHeight = frameSize.height;
     CGFloat scaleFactor = 0.0;
