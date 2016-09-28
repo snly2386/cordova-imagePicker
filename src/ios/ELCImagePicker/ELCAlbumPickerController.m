@@ -140,21 +140,6 @@
     return cell;
 }
 
-    (UIImage *)resize:(UIImage *)image to:(CGSize)newSize {
-     UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
-     [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
-     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-     UIGraphicsEndImageContext();
-     return newImage;
- }
-
-
-
-
-
-
-
-
 #pragma mark -
 #pragma mark Table view delegate
 
