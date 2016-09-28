@@ -132,9 +132,7 @@
     NSInteger gCount = [g numberOfAssets];
 
     cell.textLabel.text = [NSString stringWithFormat:@"%@ (%ld)",[g valueForProperty:ALAssetsGroupPropertyName], (long)gCount];
-    UIImage* image = [UIImage imageWithCGImage:[(ALAssetsGroup*)[self.assetGroups objectAtIndex:indexPath.row] posterImage]];
-    image = [self resize:image to:CGSizeMake(78, 78)];
-    [cell.imageView setImage:image];
+    [cell.imageView setImage:[UIImage imageWithCGImage:[(ALAssetsGroup*)[self.assetGroups objectAtIndex:indexPath.row] posterImage]]];
       [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
 
     return cell;
@@ -160,7 +158,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	return 57;
+	return 95;
 }
 
 @end
