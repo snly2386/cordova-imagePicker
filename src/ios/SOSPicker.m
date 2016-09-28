@@ -126,7 +126,7 @@
     CGFloat height = imageSize.height;
     CGFloat targetWidth = frameSize.width;
     CGFloat targetHeight = frameSize.height;
-    CGFloat scaleFactor = 1.0;
+    CGFloat scaleFactor = 0.0;
     CGSize scaledSize = frameSize;
 
     if (CGSizeEqualToSize(imageSize, frameSize) == NO) {
