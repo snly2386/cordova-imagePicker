@@ -21,7 +21,7 @@
 	NSDictionary *options = [command.arguments objectAtIndex: 0];
 
 	NSInteger maximumImagesCount = [[options objectForKey:@"maximumImagesCount"] integerValue];
-	self.width = 300;
+	self.width = [[options objectForKey:@"width"] integerValue];
 	self.height = [[options objectForKey:@"height"] integerValue];
 	self.quality = [[options objectForKey:@"quality"] integerValue];
 
@@ -122,8 +122,8 @@
     UIImage* sourceImage = anImage;
     UIImage* newImage = nil;
     CGSize imageSize = sourceImage.size;
-    CGFloat width = imageSize.width;
-    CGFloat height = imageSize.height;
+    CGFloat width = 500;
+    CGFloat height = 500;
     CGFloat targetWidth = frameSize.width;
     CGFloat targetHeight = frameSize.height;
     CGFloat scaleFactor = 0.0;
